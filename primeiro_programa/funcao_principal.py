@@ -31,6 +31,7 @@ def salva_clientes(num_clientes=3):
 def ordena_por_idade(lista_clientes):
     return sorted(lista_clientes, reverse = True, key=lambda d: d['idade'])
 
+
 def outra_funcao():
     """
     Uma outra funcao dentro do programa.
