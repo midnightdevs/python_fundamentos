@@ -9,6 +9,28 @@ def funcao_principal():
     print('Olá Mundo')
 
 
+def cadastro():
+    nome = input('Informe o nome: ')
+    sexo = input('Informe o sexo:')
+    idade = int(input('Informe a idade: '))
+
+    return {
+        "nome": nome,
+        "sexo": sexo,
+        "idade": idade
+    }
+
+def salva_clientes(num_clientes=3):
+    lista_clientes = []
+    for num in num_clientes:
+        cliente = cadastro()
+        lista_clientes.append(cliente)
+
+    return lista_clientes
+
+def ordena_por_idade(lista_clientes):
+    return sorted(lista_clientes, reverse = True, key=lambda d: d['idade'])
+
 def outra_funcao():
     """
     Uma outra funcao dentro do programa.
