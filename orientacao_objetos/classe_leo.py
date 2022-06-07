@@ -1,7 +1,7 @@
 class controle_remoto:
-    marca = 'sansung'
+    marca = 'samsung'
     cor = 'preto'
 
-sansung = controle_remoto()
+controle = controle_remoto()
 
-print(sansung.marca, sansung.cor)
+print(controle.marca, controle.cor)
