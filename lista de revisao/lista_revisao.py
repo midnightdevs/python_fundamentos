@@ -157,6 +157,7 @@ print(outro_dict)
 
 yes = input('Você Quer Começar? S/N ')
 
+lista_clientes = []
 
 while yes == 'S':
 
@@ -164,15 +165,16 @@ while yes == 'S':
     idade2 = input('Qual a sua idade? ')
     profissao = input('Qual a sua profissão? ')
     yes = input('Você Quer continuar? S/N ')
+    
 
     o_dict = {
         'Nome': Nome2,
         'Idade': idade2,
         'Profissão': profissao
     }
- lista_clientes = []
-    dicionario = lista_clientes.append(o_dict)
-print(dicionario)
+
+    lista_clientes.append(o_dict)
+print(lista_clientes)
 
 # PORQUE AO CONSIGO MOSTRAR mAIS DE UM DICIONARIO************
 # arrumar o local onde esta a lista
