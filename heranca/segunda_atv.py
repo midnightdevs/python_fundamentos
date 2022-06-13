@@ -16,12 +16,12 @@ class Funcionario(Pessoa):
         self.tipo_de_trabalho = tipo_de_trabalho
         super().__init__(endereco, nome, sobrenome)
 
-    def funcio(self):
+    def funcao_pessoa(self):
         print(f'O {self.nome} trabalha como {self.tipo_de_trabalho}')
 
-exercicio = Pessoa('Rua Kamesuke Yonamine 172', 'Leonardo', 'Prado Suzin')
-exercicio.casa()
-exercicio.nome_completo()
+usuario = Pessoa('Rua Kamesuke Yonamine 172', 'Leonardo', 'Prado Suzin')
+usuario.casa()
+usuario.nome_completo()
 
-funcio1 = Funcionario(endereco='Rua Xavantes 1',nome='Erick',sobrenome='Vargas',tipo_de_trabalho='Dev')
-funcio1.funcio()
+trabalhador = Funcionario(endereco='Rua Xavantes 1',nome='Erick',sobrenome='Vargas',tipo_de_trabalho='Dev')
+trabalhador.funcao_pessoa()
