@@ -11,30 +11,31 @@ class Livro:
 book = Livro(titulo = 'dom queixote', autor = 'Miguel de Cervantes', genero_literario = 'ficção', ano = 1906)
 book.read()
 
-print(30 * '=')
 
 class Pessoa:
-    def __init__(self):
-        self.nome = 'Jonas'
-        self.sobrenome = 'Ferreira'
-        self.endereço = 'Bairro itoupavazinha'
+    def __init__(self, nome, sobrenome, endereco):
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.endereco = endereco
 
 
-    def person(self):
-        print(self.nome, self.sobrenome, self.endereço)
+    def imprime_nome(self):
+        print(self.nome, self.sobrenome)
+
+    def imprime_endereco(self):
+        print(f'O endereço  de {self.nome} é : {self.endereco}')
 
 class Funcionario(Pessoa):
-    def __init__(self, tipo_de_trabalho):
-        super().__init__()
+    def __init__(self, nome, sobrenome, endereco, tipo_de_trabalho):
+        super().__init__(nome, sobrenome, endereco)
         self.tipo_de_trabalho = tipo_de_trabalho
 
-    def test(self):
-        print(self.nome, self.sobrenome, self.endereço, self.tipo_de_trabalho)
+    def imprime_nome_funcao(self):
+        self.imprime_nome()
+        print(f'Sua função é {self.tipo_de_trabalho}')
 
+Jonas = Funcionario(nome = 'Jonas', sobrenome = 'Ferreira', endereco = 'Bairro Itoupavazinha', tipo_de_trabalho = 'Professor')
 
-first = Pessoa()
-second = Funcionario(tipo_de_trabalho = 'Professor')
-
-first.person()
-second.test()
-    
+Jonas.imprime_nome()
+Jonas.imprime_endereco()
+Jonas.imprime_nome_funcao()    
