@@ -13,8 +13,8 @@ class Pessoa:
 
 class Funcionario(Pessoa):
     def __init__(self, endereco, nome, sobrenome,tipo_de_trabalho):
-        self.tipo_de_trabalho = tipo_de_trabalho
         super().__init__(endereco, nome, sobrenome)
+        self.tipo_de_trabalho = tipo_de_trabalho
 
     def funcao_pessoa(self):
         print(f'O {self.nome} trabalha como {self.tipo_de_trabalho}')
